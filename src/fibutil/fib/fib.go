@@ -1,5 +1,9 @@
 // fib project fib.go
+//
+// This is my first demo from others
 package fib
+
+type T struct{}
 
 // 非递归方式实现Fibonacci算法
 func Fibm(n int64) int64 {
@@ -37,4 +41,8 @@ func _Fibm2(n, a1, a2 int64) int64 {
 		return a1
 	}
 	return _Fibm2(n-1, a2, a1+a2)
+}
+
+func (t T) Method1() {
+
 }
