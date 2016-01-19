@@ -4,9 +4,33 @@ package main
 import (
 	"fibutil/fib"
 	"fmt"
+	//	"os"
+	//	"strconv"
 )
 
 func main() {
-	fmt.Println("Hello World! I am chi lintong!")
-	fmt.Println("I need upload to GitHub.")
+
+	for i := 0; i < 10; i++ {
+		fmt.Println(fib.Fibm(int64(i)))
+	}
+
+	//	switch len(os.Args) {
+	//	case 1:
+	//		fmt.Println(os.Args[0])
+	//	case 2:
+	//		n, err := strconv.ParseInt(os.Args[1], 10, 64)
+	//		if err == nil {
+	//			fmt.Println(fib.Fibm(n))
+	//			return
+	//		}
+	//	case 3:
+	//		n1, e1 := strconv.ParseInt(os.Args[1], 10, 64)
+	//		n2, e2 := strconv.ParseInt(os.Args[2], 10, 64)
+	//		if e1 == nil && e2 == nil {
+	//			fmt.Println(fib.Fibm(n1))
+	//			fmt.Println(fib.Fibm(n2))
+	//			return
+	//		}
+	//	}
+	//	fmt.Fprintf(os.Stderr, "%s, fibonacci number util\n\tfibutil n\t:fibonacci number\n\tfibutil n1 n2\t:fibonacci number list\n", os.Args[0])
 }
