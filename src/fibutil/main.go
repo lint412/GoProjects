@@ -2,6 +2,7 @@
 package main
 
 import (
+	"fibutil/fib"
 	"fmt"
 )
 
