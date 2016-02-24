@@ -2,12 +2,17 @@
 package main
 
 import (
+	//	"errors"
 	"fmt"
+	//	"math"
 	//	"runtime"
 	//	"unsafe"
 	//"os"
 	//"strconv"
 )
+
+//var num int = 10
+//var numx2, numx3 int
 
 /*var prompt = "Enter a digit, e.g. 3 " + "or %s to quit."
 
@@ -176,9 +181,91 @@ func main() {
 		v = 5
 	}*/
 
-	for i, j, s := 0, 5, "a"; i < 3 && j < 100 && s != "aaaaa"; i, j,
+	/*for i, j, s := 0, 5, "a"; i < 3 && j < 100 && s != "aaaaa"; i, j,
 		s = i+1, j+1, s+"a" {
 		fmt.Println("Value of i, j, s:", i, j, s)
-	}
+	}*/
 
+	//	numx2, numx3 = getX2AndX3(num)
+	//	PrintValues()
+	//	numx2, numx3 = getX2AndX3_2(num)
+	//	PrintValues()
+
+	//	sum, calc, minus := operateVal(20, 9)
+	//	fmt.Printf("return value are: %d %d %d", sum, calc, minus)
+
+	//	fmt.Print("First example with -1: ")
+	//	ret1, err1 := MySqrt(-1)
+	//	if err1 != nil {
+	//		fmt.Println("Error! Return values are: ", ret1, err1)
+	//	} else {
+	//		fmt.Println("It's ok! Return values are: ", ret1, err1)
+	//	}
+
+	//	fmt.Print("Second example with 5: ")
+	//	//you could also write it like this
+	//	if ret2, err2 := MySqrt(5); err2 != nil {
+	//		fmt.Println("Error! Return values are: ", ret2, err2)
+	//	} else {
+	//		fmt.Println("It's ok! Return values are: ", ret2, err2)
+	//	}
+	//	// named return variables:
+	//	fmt.Println(MySqrt2(5))
+
+	n := 0
+	reply := &n
+	Multiply(10, 5, reply)
+	fmt.Println("Multiply:", n) // Multiply: 50
+
+}
+
+//func PrintValues() {
+//	fmt.Printf("num = %d, 2x num = %d, 3x num = %d\n", num, numx2, numx3)
+//}
+
+//func getX2AndX3(input int) (int, int) {
+//	return 2 * input, 3 * input
+//}
+
+//func getX2AndX3_2(input int) (x2 int, x3 int) {
+//	x2 = 2 * input
+//	x3 = 3 * input
+//	//	return x2, x3
+//	return
+//}
+
+//func operateVal(a, b int) (int, int, int) {
+//	return a + b, a * b, a - b
+//}
+
+//func operateVal(a, b int) (sum, cal, minu int) {
+//	sum, cal, minu = a+b, a*b, a-b
+//	return
+//}
+
+//func MySqrt(f float64) (float64, error) {
+//	//return an error as second parameter if invalid input
+//	if f < 0 {
+//		return float64(math.NaN()), errors.New("I won't be able to do a sqrt of negative number!")
+//	}
+//	//otherwise use default square root function
+//	return math.Sqrt(f), nil
+//}
+
+////name the return variables - by default it will have 'zero-ed' values i.e. numbers are 0, string is empty, etc.
+//func MySqrt2(f float64) (ret float64, err error) {
+//	if f < 0 {
+//		//then you can use those variables in code
+//		ret = float64(math.NaN())
+//		err = errors.New("I won't be able to do a sqrt of negative number!")
+//	} else {
+//		ret = math.Sqrt(f)
+//		//err is not assigned, so it gets default value nil
+//	}
+//	//automatically return the named return variables ret and err
+//	return
+//}
+
+func Multiply(a, b int, reply *int) {
+	*reply = a * b
 }
