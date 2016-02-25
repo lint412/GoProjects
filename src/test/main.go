@@ -9,6 +9,8 @@ import (
 	//	"unsafe"
 	//"os"
 	//"strconv"
+	//	"io"
+	//	"log"
 )
 
 //var num int = 10
@@ -212,10 +214,30 @@ func main() {
 	//	// named return variables:
 	//	fmt.Println(MySqrt2(5))
 
-	n := 0
-	reply := &n
-	Multiply(10, 5, reply)
-	fmt.Println("Multiply:", n) // Multiply: 50
+	//	n := 0
+	//	reply := &n
+	//	Multiply(10, 5, reply)
+	//	fmt.Println("Multiply:", n) // Multiply: 50
+
+	//	x := min(1, 3, 2, 0)
+	//	fmt.Printf("The minimum is: %d\n", x)
+	//	arr := []int{7, 9, 3, 5, 1}
+	//	x = min(arr...)
+	//	fmt.Printf("The minimum in the array arr is: %d", x)
+
+	//	a()
+
+	//	func1("Go")
+
+	//	printValue(0)
+
+	func(cn int) {
+		sum := 0
+		for i := 1; i <= cn; i++ {
+			sum += i
+		}
+		fmt.Print(sum)
+	}(5)
 
 }
 
@@ -266,6 +288,51 @@ func main() {
 //	return
 //}
 
-func Multiply(a, b int, reply *int) {
-	*reply = a * b
-}
+//func Multiply(a, b int, reply *int) {
+//	*reply = a * b
+//}
+
+//func min(a ...int) int {
+//	if len(a) == 0 {
+//		return 0
+//	}
+//	min := a[0]
+//	for _, v := range a {
+//		fmt.Println(v)
+//		if v < min {
+//			min = v
+//		}
+//	}
+//	return min
+//}
+
+//func a() {
+//	i := 1
+//	defer fmt.Println(i)
+//	defer fmt.Println(9)
+//	i++
+//	fmt.Printf("last value: %d\n", i)
+//	return
+//}
+
+//func enter(s string, n int, err error) {
+//	log.Printf("func1(%q) = %d, %v", s, n, err)
+//}
+
+//func func1(s string) (n int, err error) {
+//	defer func() {
+//		log.Printf("func1(%q) = %d, %v", s, n, err)
+//	}()
+//	//	defer enter(s, n, err)
+//	s = "Other"
+//	return 7, io.EOF
+//}
+
+//func printValue(i int) {
+//	i++
+//	if i > 10 {
+//		return
+//	}
+//	printValue(i)
+//	fmt.Println(i)
+//}
