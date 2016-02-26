@@ -231,13 +231,20 @@ func main() {
 
 	//	printValue(0)
 
-	func(cn int) {
-		sum := 0
-		for i := 1; i <= cn; i++ {
-			sum += i
-		}
-		fmt.Print(sum)
-	}(5)
+	//	func(cn int) {
+	//		sum := 0
+	//		for i := 1; i <= cn; i++ {
+	//			sum += i
+	//		}
+	//		fmt.Print(sum)
+	//	}(5)
+
+	//	f := adder(5)
+	//	fmt.Println("result=", f(3))
+	//	fmt.Println("result=", f(2))
+
+	var arrKeyValue = []string{1: "Chris", 3: "Ron"}
+	fmt.Println(len(arrKeyValue))
 
 }
 
@@ -335,4 +342,12 @@ func main() {
 //	}
 //	printValue(i)
 //	fmt.Println(i)
+//}
+
+//func adder(a int) func(b int) int {
+//	fmt.Println("a=", a)
+//	return func(b int) int {
+//		a++
+//		return a + b
+//	}
 //}
