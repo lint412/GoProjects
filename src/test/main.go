@@ -3,6 +3,7 @@ package main
 
 import (
 	//	"errors"
+	//	"bytes"
 	"fmt"
 	//	"math"
 	//	"runtime"
@@ -243,8 +244,60 @@ func main() {
 	//	fmt.Println("result=", f(3))
 	//	fmt.Println("result=", f(2))
 
-	var arrKeyValue = []string{1: "Chris", 3: "Ron"}
-	fmt.Println(len(arrKeyValue))
+	//	var arrKeyValue = []string{1: "Chris", 3: "Ron"}
+	//	fmt.Println(len(arrKeyValue))
+
+	//	s := make([]byte, 5)
+	//	fmt.Println(len(s), " ", cap(s))
+	//	s = s[2:4]
+	//	fmt.Println(len(s), " ", cap(s))
+	//	s1 := []byte{'p', 'o', 'e', 'm'}
+	//	s2 := s1[2:]
+	//	fmt.Println(len(s2), " ", cap(s2))
+	//	for i := 0; i < len(s2); i++ {
+	//		fmt.Printf("%c", s2[i])
+	//	}
+	//	fmt.Println()
+	//	s2[1] = 't'
+
+	//	for i := 0; i < len(s1); i++ {
+	//		fmt.Printf("%c\n", s1[i])
+	//	}
+	//	fmt.Println()
+
+	//	s3 := bytes.SplitN(s1, s1[2:3], 2)
+	//	//s3 := bytes.Split(s1, nil)
+	//	//bytes.Buffer.ReadRune()
+
+	//	for i := 0; i < len(s3); i++ {
+	//		for j := 0; j < len(s3[i]); j++ {
+	//			fmt.Printf("%c\n", s3[i][j])
+	//		}
+	//		fmt.Println()
+	//	}
+
+	//	items := [...]int{10, 20, 30, 40, 50}
+	//	for i, _ := range items {
+	//		items[i] *= 2
+	//	}
+
+	//	for _, item := range items {
+	//		fmt.Println(item)
+	//	}
+
+	//	sl := items[5:6]
+	//	fmt.Println(len(sl), " ", cap(sl))
+
+	sl_from := []int{1, 2, 3}
+	sl_to := make([]int, 10)
+
+	n := copy(sl_to, sl_from)
+	fmt.Println(sl_to)
+	fmt.Printf("Copied %d elements\n", n) // n == 3
+
+	sl3 := []int{1, 2, 3}
+	sl3 = append(sl3, 4, 5, 6)
+	fmt.Println(sl3)
 
 }
 
