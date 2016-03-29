@@ -9,10 +9,38 @@ import (
 	//	"runtime"
 	//	"unsafe"
 	//"os"
-	//"strconv"
+	"strconv"
 	//	"io"
 	//	"log"
 )
+
+//type Base struct{}
+
+//func (Base) Magic() {
+//	fmt.Println("base magic")
+//}
+
+//func (self Base) MoreMagic() {
+//	self.Magic()
+//	self.Magic()
+//}
+
+//type Voodoo struct {
+//	Base
+//}
+
+//func (Voodoo) Magic() {
+//	fmt.Println("voodoo magic")
+//}
+
+type TwoInts struct {
+	a int
+	b int
+}
+
+func (tn *TwoInts) String() string {
+	return "(" + strconv.Itoa(tn.a) + "/" + strconv.Itoa(tn.b) + ")"
+}
 
 //var num int = 10
 //var numx2, numx3 int
@@ -288,16 +316,33 @@ func main() {
 	//	sl := items[5:6]
 	//	fmt.Println(len(sl), " ", cap(sl))
 
-	sl_from := []int{1, 2, 3}
-	sl_to := make([]int, 10)
+	//	sl_from := []int{1, 2, 3}
+	//	sl_to := make([]int, 10)
 
-	n := copy(sl_to, sl_from)
-	fmt.Println(sl_to)
-	fmt.Printf("Copied %d elements\n", n) // n == 3
+	//	n := copy(sl_to, sl_from)
+	//	fmt.Println(sl_to)
+	//	fmt.Printf("Copied %d elements\n", n) // n == 3
 
-	sl3 := []int{1, 2, 3}
-	sl3 = append(sl3, 4, 5, 6)
-	fmt.Println(sl3)
+	//	sl3 := []int{1, 2, 3}
+	//	sl3 = append(sl3, 4, 5, 6)
+	//	fmt.Println(sl3)
+
+	//	capitals := map[string]string{"France": "Paris", "Italy": "Rome", "Japan": "Tokyo"}
+	//	for key, capt := range capitals {
+	//		fmt.Println("Map item: Capital of", key, "is", capt /*capitals[key]*/)
+	//	}
+
+	//	v := new(Voodoo)
+	//	v.Magic()
+	//	v.MoreMagic()
+
+	two1 := new(TwoInts)
+	two1.a = 12
+	two1.b = 10
+	fmt.Printf("two1 is: %v\n", two1)
+	fmt.Println("two1 is:", two1)
+	fmt.Printf("two1 is: %T\n", two1)
+	fmt.Printf("two1 is: %#v\n", two1)
 
 }
 
